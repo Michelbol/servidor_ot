@@ -524,7 +524,7 @@ return true
 end
 
 function Player.addBonusReroll(rerollCount)
-  self:sendError("Teste Michel Bolzon Souza Dos Reis: ".. rerollCount)
+  self:sendError("Teste Michel Bolzon Souza Dos Reis: ")
 
 end
 
