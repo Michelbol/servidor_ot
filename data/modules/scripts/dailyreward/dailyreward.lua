@@ -515,7 +515,7 @@ function Player.selectDailyReward(self, msg)
   end
 
   if (dailyTable.type == DAILY_REWARD_TYPE_PREY_REROLL) then
-    Player.addBonusReroll(reward.rerollCount)
+    Player.addBonusReroll(self, reward.rerollCount)
     DailyReward.insertHistory(self:getGuid(), self:getDayStreak(), "Claimed reward no. " .. self:getDayStreak() + 1 .. ". Picked reward: " .. reward.rerollCount .. "x Prey bonus reroll(s)")
     DailyReward.processReward(playerId, source)
   end
@@ -524,7 +524,7 @@ return true
 end
 
 function Player.addBonusReroll(self, rerollCount)
-  self:sendError("Teste Michel Bolzon Souza Dos Reis: ")
+  self:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have been teleported to your hometown.')
 end
 
 function Player.sendError(self, error)
