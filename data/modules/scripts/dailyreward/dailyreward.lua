@@ -515,7 +515,7 @@ function Player.selectDailyReward(self, msg)
   end
 
   if (dailyTable.type == DAILY_REWARD_TYPE_PREY_REROLL) then
-    Player.addBonusReroll(self, reward.rerollCount)
+    Player.addBonusReroll(playerId, reward.rerollCount)
     DailyReward.insertHistory(self:getGuid(), self:getDayStreak(), "Claimed reward no. " .. self:getDayStreak() + 1 .. ". Picked reward: " .. reward.rerollCount .. "x Prey bonus reroll(s)")
     DailyReward.processReward(playerId, source)
   end
@@ -523,8 +523,14 @@ function Player.selectDailyReward(self, msg)
 return true
 end
 
-function Player.addBonusReroll(self, rerollCount)
-  self:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have been teleported to your hometown.')
+function Player.addBonusReroll(playerId, reRollCount)
+  local bonus_rerolls = Player.getBonusReroll(playerId)
+  bonus_rerolls = (bonus_rerolls + reRollCount)
+  db.query(string.format("update `players` set `bonus_rerolls` = %s where id = %s", bonus_rerolls, playerId))
+end
+
+function Player.getBonusReroll(playerId)
+  return db.query(string.format("select bonus_rerolls from `players` where id = %s", playerId))
 end
 
 function Player.sendError(self, error)
