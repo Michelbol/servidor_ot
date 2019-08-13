@@ -523,9 +523,8 @@ function Player.selectDailyReward(self, msg)
 return true
 end
 
-function Player.addBonusReroll(rerollCount)
+function Player.addBonusReroll(self, rerollCount)
   self:sendError("Teste Michel Bolzon Souza Dos Reis: ")
-
 end
 
 function Player.sendError(self, error)
