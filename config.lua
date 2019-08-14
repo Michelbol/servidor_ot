@@ -2,7 +2,7 @@
 -- NOTE: valid values for worldType are: "pvp", "no-pvp" and "pvp-enforced"
 worldType = "pvp"
 hotkeyAimbotEnabled = true
-protectionLevel = 35
+protectionLevel = 80
 pzLocked = 50 * 1000
 removeChargesFromRunes = true
 removeChargesFromPotions = true
@@ -28,7 +28,7 @@ loginProtocolPort = 7171
 gameProtocolPort = 7172
 statusProtocolPort = 7171
 maxPlayers = 0
-motd = "Welcome to The Wallera Global!"
+motd = "Welcome to The Lunera Global!"
 onePlayerOnlinePerAccount = true
 allowClones = false
 serverName = "Lunera-Global"
@@ -136,7 +136,7 @@ defaultPriority = "high"
 startupDatabaseOptimization = true
 
 -- Status server information
-ownerName = "ADM Kabo"
-ownerEmail = "kabofloww@gmail.com"
-url = "http://www.facebook.com/kaboflow18"
-location = "Mexico"
+ownerName = "ADM Michel"
+ownerEmail = "michel.bolzon123@gmail.com"
+url = "http://www.facebook.com/michelbolzon"
+location = "Brasil"
