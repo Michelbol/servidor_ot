@@ -54,4 +54,5 @@
 	<talkaction words="!report" separator=" " script="player/admin_report.lua"/>
 	<talkaction words="!autoloot" separator=" " script="player/autoloot.lua"/>
 	<talkaction words="!add" separator=" " script="player/add_autoloot.lua" />
+	<talkaction words="!bless" script="player/bless.lua"/>
 </talkactions>

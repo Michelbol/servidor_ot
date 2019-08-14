@@ -738,6 +738,7 @@ GameStore.getOfferById = function(id)
     if category.offers then
       for Off_k, offer in ipairs(category.offers) do
         if type(offer.id) == "number" then
+          --todo colocar validação para ofertas com count
           if offer.id == id then
             return offer
           end
