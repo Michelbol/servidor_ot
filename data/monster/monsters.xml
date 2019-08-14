@@ -729,7 +729,7 @@
 	<monster name="Fatality" file="Bosses/fatality.xml"/>
 	<monster name="Fazzrah" file="Bosses/fazzrah.xml"/>
 	<monster name="Fernfang" file="Bosses/fernfang.xml"/>
-	<monster file="Bosses/feroxa.xml" name="Feroxa"/>
+	<monster file="Bosses/Feroxa.xml" name="Feroxa"/>
 	<monster file="Bosses/feroxa2.xml" name="Feroxa2"/>
 	<monster file="Bosses/feroxa3.xml" name="Feroxa3"/>
 	<monster file="Bosses/feroxa4.xml" name="Feroxa4"/>
