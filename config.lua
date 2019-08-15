@@ -38,7 +38,7 @@ maxPacketsPerSecond = 25
 
 -- Version Manual
 clientVersionMin = 1000
-clientVersionMax = 1157
+clientVersionMax = 1200
 clientVersionStr = "11.57"
 
 -- Depot Limit
@@ -80,7 +80,7 @@ mapAuthor = "Cipsoft"
 marketOfferDuration = 30 * 24 * 60 * 60
 premiumToCreateMarketOffer = true
 checkExpiredMarketOffersEachMinutes = 60
-maxMarketOffersAtATimePerPlayer = 100
+maxMarketOffersAtATimePerPlayer = 10000
 
 -- MySQL
 mysqlHost = "127.0.0.1"
