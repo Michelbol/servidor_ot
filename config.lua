@@ -8,7 +8,7 @@ removeChargesFromRunes = true
 removeChargesFromPotions = true
 removeWeaponAmmunition = true
 removeWeaponCharges = true
-timeToDecreaseFrags = 24 * 60 * 60 * 1000
+timeToDecreaseFrags = 45 * 24 * 60 * 60
 whiteSkullTime = 15 * 60 * 1000
 stairJumpExhaustion = 2 * 1000
 experienceByKillingPlayers = false
@@ -22,6 +22,7 @@ orangeSkullDuration = 7
 
 -- Connection Config
 -- NOTE: maxPlayers set to 0 means no limit
+-- NOTE: MaxPacketsPerSeconds if you change you will be subject to bugs by WPE, keep the default value of 25
 ip = "35.231.220.250"
 bindOnlyGlobalAddress = false
 loginProtocolPort = 7171
@@ -35,11 +36,18 @@ serverName = "Lunera-Global"
 statusTimeout = 5 * 1000
 replaceKickOnLogin = true
 maxPacketsPerSecond = 25
+maxItem = 2000
+maxContainer = 100
+
+-- 0 = Disable,
+-- 1 = onKillMonster,
+-- 2 = onOpenCorpse -- restart required]]
+autolootmode = 2
 
 -- Version Manual
 clientVersionMin = 1000
 clientVersionMax = 1200
-clientVersionStr = "11.57"
+clientVersionStr = "Only support versions on site."
 
 -- Depot Limit
 freeDepotLimit = 2000
@@ -49,9 +57,8 @@ depotBoxes = 17
 -- GameStore
 gamestoreByModules = true
 
--- Casting System
-enableLiveCasting = true
-liveCastPort = 7173
+-- Quest Sytem
+loadQuestLua = true
 
 -- Expert Pvp Config
 expertPvp = false
@@ -65,16 +72,18 @@ deathLosePercent = -1
 -- Houses
 -- NOTE: set housePriceEachSQM to -1 to disable the ingame buy house functionality
 housePriceEachSQM = 1000
-houseRentPeriod = "daily"
+houseRentPeriod = "never"
 
 -- Item Usage
+-- Do not touch here
+-- Avoid use of WIPE program to crash the distro
 timeBetweenActions = 200
 timeBetweenExActions = 1000
 
 -- Map
 -- NOTE: set mapName WITHOUT .otbm at the end
 mapName = "realmap"
-mapAuthor = "Cipsoft"
+mapAuthor = "CipSoft"
 
 -- Market
 marketOfferDuration = 30 * 24 * 60 * 60
