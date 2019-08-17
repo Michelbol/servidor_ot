@@ -56,59 +56,19 @@ GameStore.Categories = { {
    rookgaard = true,
    state = GameStore.States.STATE_NONE,
  }, {
-   icons = { "Category_PremiumTime.png" },
-   name = "Premium Time",
-   offers = { {
-                description = "Premium Account for 30 days.",
-                icons = { "Product_PremiumTime30.png" },
-                name = "30 Days of Premium Time",
-                price = 250,
-                state = GameStore.States.STATE_SALE,
-                id = 30,
-                type = GameStore.OfferTypes.OFFER_TYPE_PREMIUM,
-                validUntil = 30
-              }, {
-                description = "Premium Account for 90 days.",
-                icons = { "Product_PremiumTime90.png" },
-                name = "90 Days of Premium Time",
-                price = 400,
-                state = GameStore.States.STATE_SALE,
-                id = 90,
-                type = GameStore.OfferTypes.OFFER_TYPE_PREMIUM,
-                validUntil = 30
-              }, {
-                description = "Premium Account for 180 days.",
-                icons = { "Product_PremiumTime180.png" },
-                name = "180 Days of Premium Time",
-                price = 700,
-                state = GameStore.States.STATE_SALE,
-                id = 180,
-                type = GameStore.OfferTypes.OFFER_TYPE_PREMIUM,
-                validUntil = 30
-              }, {
-                description = "Premium Account for 180 days.",
-                icons = { "Product_PremiumTime360.png" },
-                name = "360 Days of Premium Time",
-                price = 1000,
-                state = GameStore.States.STATE_SALE,
-                id = 360,
-                type = GameStore.OfferTypes.OFFER_TYPE_PREMIUM,
-                validUntil = 30
-              } },
-   rookgaard = true,
-   state = GameStore.States.STATE_SALVE,
- }, {
    description = "Buy an Extra Service to transfer a character to anothergame world or to change your character's name or sex.",
    icons = { "Category_ExtraServices.png" },
    name = "Extra Services",
-   offers = { {
-                description = "You must be in a protection zone to change your name. After entering your new name, you will be disconnected from the server. You must logout completely and login again using your account details in order to refresh your character list.",
-                icons = { "namechanger.png" },
-                name = "Character Name Change",
-                price = 250,
-                id = 65542,
-                type = GameStore.OfferTypes.OFFER_TYPE_NAMECHANGE,
-              }, {
+   offers = {
+       --{
+       --         description = "You must be in a protection zone to change your name. After entering your new name, you will be disconnected from the server. You must logout completely and login again using your account details in order to refresh your character list.",
+       --         icons = { "namechanger.png" },
+       --         name = "Character Name Change",
+       --         price = 250,
+       --         id = 65542,
+       --         type = GameStore.OfferTypes.OFFER_TYPE_NAMECHANGE,
+       --       },
+            {
                 description = "Use this to change the sex of your character. Changes apply immediately. You don't need to logout for changes to apply.",
                 icons = { "sexchanger.png" },
                 name = "Character Sex Change",
@@ -182,56 +142,64 @@ GameStore.Categories = { {
    description = "Buy potions to refil your character's hit points and mana.",
    icons = { "Category_Potions.png" },
    name = "Potions & Kegs",
-   offers = { {
-                count = 125,
-                icons = { "Product_Potion_Health_potion.png" },
-                name = "Health Potion",
-                price = 4,
-                id = 7618,
-                type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-              }, {
+   offers = {
+       --{
+       --         count = 125,
+       --         icons = { "Product_Potion_Health_potion.png" },
+       --         name = "Health Potion",
+       --         price = 4,
+       --         id = 7618,
+       --         type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+       --       },
+              {
                 count = 300,
                 icons = { "Product_Potion_Health_potion.png" },
                 name = "Health Potion",
                 price = 10,
                 id = 7618,
                 type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-              }, {
-                count = 100,
-                icons = { "Product_Potion_Strong_health_potion.png" },
-                name = "Strong Health Potion",
-                price = 7,
-                id = 7588,
-                type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-              }, {
+              },
+              --{
+              --  count = 100,
+              --  icons = { "Product_Potion_Strong_health_potion.png" },
+              --  name = "Strong Health Potion",
+              --  price = 7,
+              --  id = 7588,
+              --  type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+              --},
+              {
                 count = 300,
                 icons = { "Product_Potion_Strong_health_potion.png" },
                 name = "Strong Health Potion",
                 price = 18,
                 id = 7588,
                 type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-              }, {
-                count = 100,
-                icons = { "Product_Potion_Great_health_potion.png" },
-                name = "Great Health Potion",
-                price = 13,
-                id = 7591,
-                type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-              }, {
+              },
+              --{
+              --  count = 100,
+              --  icons = { "Product_Potion_Great_health_potion.png" },
+              --  name = "Great Health Potion",
+              --  price = 13,
+              --  id = 7591,
+              --  type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+              --},
+              {
                 count = 300,
                 icons = { "Product_Potion_Great_health_potion.png" },
                 name = "Great Health Potion",
                 price = 34,
                 id = 7591,
                 type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-              }, {
-                count = 100,
-                icons = { "Product_Potion_ultimate_health_potion.png" },
-                name = "Ultimate Health Potion",
-                price = 22,
-                id = 8473,
-                type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-              }, {
+              },
+              --{
+              --  count = 100,
+              --  icons = { "Product_Potion_ultimate_health_potion.png" },
+              --  name = "Ultimate Health Potion",
+              --  price = 22,
+              --  id = 8473,
+              --  type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+              --},
+              {
                 count = 300,
                 icons = { "Product_Potion_ultimate_health_potion.png" },
                 name = "Ultimate Health Potion",
@@ -245,14 +213,16 @@ GameStore.Categories = { {
                 price = 90,
                 id = 26031,
                 type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-              }, {
-                count = 125,
-                icons = { "Product_Potion_Mana_Potion.png" },
-                name = "Mana Potion",
-                price = 4,
-                id = 7620,
-                type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-              }, {
+              },
+              --{
+              --  count = 125,
+              --  icons = { "Product_Potion_Mana_Potion.png" },
+              --  name = "Mana Potion",
+              --  price = 4,
+              --  id = 7620,
+              --  type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+              --},
+              {
                 count = 300,
                 icons = { "Product_Potion_Mana_Potion.png" },
                 name = "Mana Potion",
