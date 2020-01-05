@@ -450,6 +450,7 @@ void Player::updateInventoryWeight()
 
 void Player::addSkillAdvance(skills_t skill, uint64_t count)
 {
+    std::cout << "Inicio Adicionar skill advance"<< std::endl;
 	uint64_t currReqTries = vocation->getReqSkillTries(skill, skills[skill].level);
 	uint64_t nextReqTries = vocation->getReqSkillTries(skill, skills[skill].level + 1);
 	if (currReqTries >= nextReqTries) {
@@ -501,6 +502,7 @@ void Player::addSkillAdvance(skills_t skill, uint64_t count)
 	if (sendUpdateSkills) {
 		sendSkills();
 	}
+	std::cout << "Final Adicionar skill advance"<< std::endl;
 }
 
 void Player::setVarStats(stats_t stat, int32_t modifier)
@@ -1636,7 +1638,7 @@ void Player::addManaSpent(uint64_t amount)
 		//player has reached max magic level
 		return;
 	}
-    std::cout << "Adicionar mana gasta"<< std::endl;
+
 	g_events->eventPlayerOnGainSkillTries(this, SKILL_MAGLEVEL, amount);
 	if (amount == 0) {
 		return;
