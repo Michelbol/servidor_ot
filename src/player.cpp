@@ -450,7 +450,7 @@ void Player::updateInventoryWeight()
 
 void Player::addSkillAdvance(skills_t skill, uint64_t count)
 {
-    std::cout << "Inicio Adicionar skill advance"<< std::endl;
+
 	uint64_t currReqTries = vocation->getReqSkillTries(skill, skills[skill].level);
 	uint64_t nextReqTries = vocation->getReqSkillTries(skill, skills[skill].level + 1);
 	if (currReqTries >= nextReqTries) {
@@ -502,7 +502,7 @@ void Player::addSkillAdvance(skills_t skill, uint64_t count)
 	if (sendUpdateSkills) {
 		sendSkills();
 	}
-	std::cout << "Final Adicionar skill advance"<< std::endl;
+
 }
 
 void Player::setVarStats(stats_t stat, int32_t modifier)
@@ -1628,6 +1628,7 @@ void Player::drainMana(Creature* attacker, int32_t manaLoss)
 
 void Player::addManaSpent(uint64_t amount)
 {
+    std::cout << "Inicio gastar mana"<< std::endl;
 	if (hasFlag(PlayerFlag_NotGainMana)) {
 		return;
 	}
@@ -1643,7 +1644,7 @@ void Player::addManaSpent(uint64_t amount)
 	if (amount == 0) {
 		return;
 	}
-
+    std::cout << "Antes do while gastar mana"<< std::endl;
 	bool sendUpdateStats = false;
 	while ((manaSpent + amount) >= nextReqMana) {
 		amount -= nextReqMana - manaSpent;
@@ -1664,7 +1665,7 @@ void Player::addManaSpent(uint64_t amount)
 			return;
 		}
 	}
-
+    std::cout << "Depois do while gastar mana"<< std::endl;
 	manaSpent += amount;
 
 	uint8_t oldPercent = magLevelPercent;
