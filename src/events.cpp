@@ -901,7 +901,7 @@ void Events::eventPlayerOnGainSkillTries(Player* player, skills_t skill, uint64_
 	if (info.playerOnGainSkillTries == -1) {
 		return;
 	}
-    std::cout << "evento quando usa mana";
+    std::cout << "evento quando usa mana"<< std::endl;
 	if (!scriptInterface.reserveScriptEnv()) {
 		std::cout << "[Error - Events::eventPlayerOnGainSkillTries] Call stack overflow" << std::endl;
 		return;
