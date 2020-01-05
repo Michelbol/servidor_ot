@@ -1636,7 +1636,7 @@ void Player::addManaSpent(uint64_t amount)
 		//player has reached max magic level
 		return;
 	}
-
+    std::cout << "Adicionar mana gasta";
 	g_events->eventPlayerOnGainSkillTries(this, SKILL_MAGLEVEL, amount);
 	if (amount == 0) {
 		return;
