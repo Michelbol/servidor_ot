@@ -422,7 +422,7 @@ void ProtocolGame::parsePacket(NetworkMessage& msg)
 	}
 
 	g_dispatcher.addTask(createTask(std::bind(&Modules::executeOnRecvbyte, g_modules, player, msg, recvbyte)));
-
+    std::cout << "Parse Packet" << recvbyte << std::endl;
 	switch (recvbyte) {
 		case 0x14: g_dispatcher.addTask(createTask(std::bind(&ProtocolGame::logout, getThis(), true, false))); break;
 		case 0x1D: addGameTask(&Game::playerReceivePingBack, player->getID()); break;
