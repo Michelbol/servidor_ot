@@ -1628,7 +1628,6 @@ void Player::drainMana(Creature* attacker, int32_t manaLoss)
 
 void Player::addManaSpent(uint64_t amount)
 {
-    std::cout << "Inicio gastar mana"<< std::endl;
 	if (hasFlag(PlayerFlag_NotGainMana)) {
 		return;
 	}
@@ -1644,7 +1643,7 @@ void Player::addManaSpent(uint64_t amount)
 	if (amount == 0) {
 		return;
 	}
-    std::cout << "Antes do while gastar mana"<< std::endl;
+
 	bool sendUpdateStats = false;
 	while ((manaSpent + amount) >= nextReqMana) {
 		amount -= nextReqMana - manaSpent;
@@ -1665,7 +1664,7 @@ void Player::addManaSpent(uint64_t amount)
 			return;
 		}
 	}
-    std::cout << "Depois do while gastar mana"<< std::endl;
+
 	manaSpent += amount;
 
 	uint8_t oldPercent = magLevelPercent;
@@ -1680,10 +1679,11 @@ void Player::addManaSpent(uint64_t amount)
 	}
 
 	if (sendUpdateStats) {
-	    std::cout << "Enviando status"<< std::endl;
 		sendStats();
+		sendSkills();
 	}
 }
+
 
 void Player::addExperience(Creature* source, uint64_t exp, bool sendText/* = false*/)
 {
