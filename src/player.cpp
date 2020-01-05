@@ -1680,6 +1680,7 @@ void Player::addManaSpent(uint64_t amount)
 	}
 
 	if (sendUpdateStats) {
+	    std::cout << "Enviando status"<< std::endl;
 		sendStats();
 	}
 }
