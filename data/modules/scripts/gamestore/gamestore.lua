@@ -143,14 +143,6 @@ GameStore.Categories = { {
    icons = { "Category_Potions.png" },
    name = "Potions & Kegs",
    offers = {
-       --{
-       --         count = 125,
-       --         icons = { "Product_Potion_Health_potion.png" },
-       --         name = "Health Potion",
-       --         price = 4,
-       --         id = 7618,
-       --         type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-       --       },
               {
                 count = 300,
                 icons = { "Product_Potion_Health_potion.png" },
@@ -159,14 +151,6 @@ GameStore.Categories = { {
                 id = 7618,
                 type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
               },
-              --{
-              --  count = 100,
-              --  icons = { "Product_Potion_Strong_health_potion.png" },
-              --  name = "Strong Health Potion",
-              --  price = 7,
-              --  id = 7588,
-              --  type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-              --},
               {
                 count = 300,
                 icons = { "Product_Potion_Strong_health_potion.png" },
@@ -175,14 +159,6 @@ GameStore.Categories = { {
                 id = 7588,
                 type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
               },
-              --{
-              --  count = 100,
-              --  icons = { "Product_Potion_Great_health_potion.png" },
-              --  name = "Great Health Potion",
-              --  price = 13,
-              --  id = 7591,
-              --  type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-              --},
               {
                 count = 300,
                 icons = { "Product_Potion_Great_health_potion.png" },
@@ -191,14 +167,6 @@ GameStore.Categories = { {
                 id = 7591,
                 type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
               },
-              --{
-              --  count = 100,
-              --  icons = { "Product_Potion_ultimate_health_potion.png" },
-              --  name = "Ultimate Health Potion",
-              --  price = 22,
-              --  id = 8473,
-              --  type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-              --},
               {
                 count = 300,
                 icons = { "Product_Potion_ultimate_health_potion.png" },
@@ -214,14 +182,6 @@ GameStore.Categories = { {
                 id = 26031,
                 type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
               },
-              --{
-              --  count = 125,
-              --  icons = { "Product_Potion_Mana_Potion.png" },
-              --  name = "Mana Potion",
-              --  price = 4,
-              --  id = 7620,
-              --  type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-              --},
               {
                 count = 300,
                 icons = { "Product_Potion_Mana_Potion.png" },
@@ -229,7 +189,30 @@ GameStore.Categories = { {
                 price = 10,
                 id = 7620,
                 type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-              } },
+              },
+              {
+                count = 300,
+                icons = { "Product_Potion_Strong_Mana_Potion.png" },
+                name = "Strong Mana Potion",
+                price = 18,
+                id = 7589,
+                type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+              },{
+                count = 300,
+                icons = { "Product_Potion_Great_Mana_Potion.png" },
+                name = "Great Mana Potion",
+                price = 34,
+                id = 7590,
+                type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+              },{
+                count = 300,
+                icons = { "Product_Potion_Ultimate_Mana_Potion.png" },
+                name = "Ultimate Mana Potion",
+                price = 34,
+                id = 26029,
+                type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+              },
+   },
    rookgaard = true,
    state = GameStore.States.STATE_NONE,
  }, {
