@@ -30,7 +30,6 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 
 			local slotcorpse = bodycontainer[times].uid
 			local itemcorpse = Item(slotcorpse)
-			player:sendTextMessage(MESSAGE_INFO_DESCR,'PlayerGuid: '.. getPlayerGUID(player) .. 'ItemCorpseId: '.. itemcorpse:getId())
 			local slotgg
 			local localizou
 			local resultId = db.storeQuery('SELECT `cont_id` FROM `player_autoloot_persist` WHERE `player_guid` = ' .. getPlayerGUID(player) .. ' AND `item_id` = ' .. itemcorpse:getId() .. '')
