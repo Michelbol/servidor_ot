@@ -1,32 +1,32 @@
-function onUse(cid, item, frompos)
+local config = {
+    [ITEM_GOLD_COIN] = {changeTo = ITEM_PLATINUM_COIN},
+    [ITEM_PLATINUM_COIN] = {changeBack = ITEM_GOLD_COIN, changeTo = ITEM_CRYSTAL_COIN},
+    [ITEM_CRYSTAL_COIN] = {changeBack = ITEM_PLATINUM_COIN}
+}
 
-    if(not isCreature(cid)) then
+function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+    local coin = config[target.itemid]
 
-        return
-
+    if not coin then
+        return false
     end
 
-
-    local plat = math.floor(getPlayerItemCount(cid, 2148)/100)
-
-    if(plat > 0) then
-
-        doPlayerRemoveItem(cid, 2148, plat*100)
-
-        doPlayerAddItem(cid, 2152, plat)
-
+    local charges = item:getCharges()
+    if coin.changeTo and target.type == 100 then
+        target:remove()
+        player:addItem(coin.changeTo, 1)
+        item:transform(item:getId(), charges -1)
+    elseif coin.changeBack then
+        target:transform(target.itemid, target.type - 1)
+        player:addItem(coin.changeBack, 100)
+        item:transform(item:getId(), charges -1)
+    else
+        return false
     end
 
-
-    local crys = math.floor(getPlayerItemCount(cid, 2152)/100)
-
-    if(crys > 0) then
-
-        doPlayerRemoveItem(cid, 2152, crys*100)
-
-        doPlayerAddItem(cid, 2160, crys)
-
+    if charges == 0 then
+        item:remove()
     end
 
-
+    return true
 end
