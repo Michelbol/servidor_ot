@@ -22,9 +22,9 @@
 
 	<!-- Autoloot mode 2 -->
 	<action actionid="500" script="autoloot.lua" />
-	<action itemid="2148" script="gold.lua" />
-	<action itemid="2152" script="gold.lua" />
-	<action itemid="2160" script="gold.lua" />
+	<action itemid="2148" script="goldconverter.lua" />
+	<action itemid="2152" script="goldconverter.lua" />
+	<action itemid="2160" script="goldconverter.lua" />
 
 	<!-- Barbarian Test Quest -->
 	<action fromid="7174" toid="7176" script="quests/barbarian test/horn.lua" />
