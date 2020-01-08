@@ -456,14 +456,14 @@ GameStore.Categories = { {
                 type = GameStore.OfferTypes.OFFER_TYPE_MOUNT,
               }, {
                 description = "Here you can purchase the Mount 'Artic Unicorn' for your character. Riding on a mount is not only cool, but also gives your character a speed boost. Note: The Mount will only be received by the character who purchased it in the Store.",
-                icons = { "Product_Mount_UnicornRainbow.png" },
+                icons = { "Product_Mount_UnicornIce.png" },
                 name = "Artic Unicorn",
                 price = 870,
                 id = 114,
                 type = GameStore.OfferTypes.OFFER_TYPE_MOUNT,
               }, {
                 description = "Here you can purchase the Mount 'Prismatic Unicorn' for your character. Riding on a mount is not only cool, but also gives your character a speed boost. Note: The Mount will only be received by the character who purchased it in the Store.",
-                icons = { "Product_Mount_UnicornIce.png" },
+                icons = { "Product_Mount_UnicornRainbow.png" },
                 name = "Prismatic Unicorn",
                 price = 870,
                 id = 115,

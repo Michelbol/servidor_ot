@@ -1283,7 +1283,8 @@ ALTER TABLE `server_config`
 -- Indexes for table `store_history`
 --
 ALTER TABLE `store_history`
-  ADD KEY `account_id` (`account_id`);
+    ADD PRIMARY KEY (`id`)
+    ADD KEY `account_id` (`account_id`);
 
 --
 -- Indexes for table `tile_store`
@@ -1398,6 +1399,11 @@ ALTER TABLE `market_offers`
 -- AUTO_INCREMENT for table `market_offers`
 --
 ALTER TABLE `newsticker`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `store_history`
+--
+ALTER TABLE `store_history`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `players`
