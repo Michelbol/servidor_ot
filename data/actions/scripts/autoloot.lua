@@ -1,7 +1,8 @@
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local issue = {}
 	local bodycontainer, slot, msg = {}, 0, ''
-	local monster = Tile(toPosition):getTopVisibleThing()
+	local tile = Tile(toPosition)
+	local monster = tile:getTopVisibleThing()
 	local corpse = getTileItemById(toPosition, monster:getId()).uid
 	local slots = getContainerSize(corpse)
 
