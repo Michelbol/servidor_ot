@@ -364,7 +364,7 @@ bool IOLoginData::loadPlayer(Player* player, DBResult_ptr result)
 	player->coinBalance = IOAccount::getCoinBalance(player->getAccount());
 	
 	player->preyBonusRerolls = result->getNumber<uint16_t>("bonus_rerolls");
-	std::cout << "prey: " result->getNumber<uint16_t>("bonus_rerolls") << std::endl;
+	std::cout << "prey: " <<result->getNumber<uint16_t>("bonus_rerolls") << std::endl;
 
 	Group* group = g_game.groups.getGroup(result->getNumber<uint16_t>("group_id"));
 	if (!group) {
