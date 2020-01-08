@@ -2,7 +2,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	player:sendTextMessage(MESSAGE_INFO_DESCR,'Position-x: ' .. toPosition.x .. ' Position-y'.. toPosition.y .. ' Position-z'..toPosition.z)
 	local issue = {}
 	local bodycontainer, slot, msg = {}, 0, ''
-	local tile = Tile(toPosition)
+	local tile = Tile(Position(toPosition.x,toPosition.y,toPosition.z))
 	local monster = tile:getTopVisibleThing()
 	local corpse = getTileItemById(toPosition, monster:getId()).uid
 	local slots = getContainerSize(corpse)
