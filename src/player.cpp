@@ -4829,7 +4829,6 @@ void Player::removeAutoLootItem(uint16_t itemId)
 
 bool Player::getAutoLootItem(const uint16_t itemId)
 {
-    std::cout << "search: " << autoLootList.find(itemId) << " end: " << autoLootList.end() << std::endl;
 	return autoLootList.find(itemId) != autoLootList.end();
 }
 
