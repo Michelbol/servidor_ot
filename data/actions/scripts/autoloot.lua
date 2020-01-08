@@ -25,7 +25,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 
 	for times = 1, slots do
 		bodycontainer[times] = getContainerItem(corpse, slot)
-		player:sendTextMessage(MESSAGE_INFO_DESCR,'PlayerGuid: '.. getPlayerGUID(player) .. 'getAutolootItem(bodycontainer[times].item.id: '.. player:getAutoLootItem(bodycontainer[times].itemid))
+		player:sendTextMessage(MESSAGE_INFO_DESCR,'PlayerGuid: '.. getPlayerGUID(player) .. 'bodycontainer[times].item.id: '.. bodycontainer[times].itemid)
 		if player:getAutoLootItem(bodycontainer[times].itemid) then
 
 			local slotcorpse = bodycontainer[times].uid
