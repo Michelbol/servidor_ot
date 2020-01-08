@@ -23,7 +23,7 @@ orangeSkullDuration = 7
 -- Connection Config
 -- NOTE: maxPlayers set to 0 means no limit
 -- NOTE: MaxPacketsPerSeconds if you change you will be subject to bugs by WPE, keep the default value of 25
-ip = "35.231.220.250"
+ip = "34.73.220.131"
 bindOnlyGlobalAddress = false
 loginProtocolPort = 7171
 gameProtocolPort = 7172
@@ -46,7 +46,7 @@ autolootmode = 2
 
 -- Version Manual
 clientVersionMin = 1000
-clientVersionMax = 1200
+clientVersionMax = 1230
 clientVersionStr = "Only support versions on site."
 
 -- Depot Limit
@@ -111,7 +111,7 @@ emoteSpells = false
 classicEquipmentSlots = false
 allowWalkthrough = true
 coinPacketSize = 1
-coinImagesURL = "http://localhost/images/store/"
+coinImagesURL = "http://34.73.220.131/images/store/"
 classicAttackSpeed = false
 
 -- Rates
