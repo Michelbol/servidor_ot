@@ -25,7 +25,7 @@ function ModalWindow(...)
                 table.insert(modalWindows.windows, self)
                 return self
         end
-        player:sendTextMessage(MESSAGE_INFO_DESCR,'Modal name: ' .. self.name)
+
         return modalWindows.modalWindowConstructor(...)
 end
 
