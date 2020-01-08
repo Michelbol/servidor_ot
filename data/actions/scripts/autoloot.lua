@@ -1,5 +1,5 @@
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	player:sendTextMessage(MESSAGE_INFO_DESCR,'Position: ' .. toPosition)
+	player:sendTextMessage(MESSAGE_INFO_DESCR,'Position-x: ' .. toPosition.x .. ' Position-y'.. toPosition.y .. ' Position-z'..toPosition.z)
 	local issue = {}
 	local bodycontainer, slot, msg = {}, 0, ''
 	local tile = Tile(toPosition)
